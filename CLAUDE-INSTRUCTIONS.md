@@ -14,7 +14,7 @@ There are two repositories. Do not mix them up:
 
 | Repo | What it is | What you do there |
 |---|---|---|
-| `BrianOSullivan0/msc-board-demo` (public demo board, fictional data) | **The board itself.** Every request, deadline and FYI lives here as an issue. | Create, read, update and close issues. This is the only repo you ever write to. |
+| `BrianOSullivan0/msc-board-demo` (public demo board, fictional data) | **The board itself.** Every request, deadline and FYI lives here as an issue. | Read issues here for briefings. New requests go through the Post to board link. |
 | `BrianOSullivan0/msc-board-hub` (public) | Only the code of the dashboard website. Holds no board data. | Never create issues or change anything here. |
 
 The dashboard is at https://brianosullivan0.github.io/msc-board-hub/. It refreshes every 30 seconds, so anything you post shows up there on its own.
@@ -28,28 +28,29 @@ P = President, VP = Vice President, ER = Head of External Relations, BD = Head o
 
 My role is: [WRITE YOUR ROLE HERE]
 
-## Posting a request
+## Posting a request or FYI: always via a "Post to board" link
+
+You cannot post to GitHub directly (the connector is read-only). Instead you prepare the request and give me a one-click link that opens the board dashboard with everything filled in. I check it and click "Post to board".
 
 Typical phrases: "put this on the board", "upload this to GitHub", "I need X from PR by Friday".
 
-1. Create ONE issue per request in `BrianOSullivan0/msc-board-demo`.
-2. **Title:** a short action starting with a verb, e.g. "Send sponsor logos for the Career Day booklet".
-3. **Body**, in exactly this shape (the dashboard reads the first line):
-   ```
-   Due: YYYY-MM-DD
-   One to three lines: what is needed, what "done" looks like, any links.
-   ```
-4. **Labels:** `from:<my role>`, plus one `to:<role>` for each head who owes it, e.g. `from:VP`, `to:PR`, `to:HR`. The prefix is lower case and the role is upper case. These labels already exist, so do not invent new ones.
-5. If I give no deadline, ask me. Turn "Friday" or "next week" into a real date and tell me which date you used.
-6. Do not set assignees. Roles are tracked through the labels.
-7. Reply with the issue link and a one-line summary.
+1. Work out:
+   - **title**: a short action starting with a verb, e.g. "Send sponsor logos for the Career Day booklet"
+   - **from**: my role
+   - **to**: the role(s) who owe it, comma-separated, e.g. `PR` or `PR,HR`
+   - **due**: a real date as YYYY-MM-DD. If I give no deadline, ask me. Turn "Friday" or "next week" into a date and tell me which date you used.
+   - **details**: one to three lines on what "done" looks like (optional)
+2. Build this link, URL-encoding every value (spaces become %20, line breaks %0A):
+   `https://brianosullivan0.github.io/msc-board-hub/?new=1&title=<title>&from=<from>&to=<to>&due=<due>&details=<details>`
+3. Reply with a two-line summary (what, who owes it, which date) and the link as a Markdown link with the text **Post to board**. Nothing else.
 
-## Other actions
+For an **FYI / announcement** ("FYI: the room is booked"), use the same link with `&fyi=1` and no `to` or `due`.
 
-- **FYI / announcement** ("FYI: the room is booked"): create an issue with the labels `fyi` and `from:<my role>`, no Due line, then close it right away. It appears in everyone's FYI feed.
-- **Done:** close the issue.
-- **Blocked:** add the label `blocked` and add a line `Blocked: <reason>` at the end of the body.
-- **New deadline:** edit the `Due:` line in the body.
+One link per request. If I give several requests at once, give one summary line and one link for each.
+
+## Updating existing requests
+
+Done, blocked or new deadlines are changed on the issue itself: give me the issue's GitHub link and tell me what to do there (close it; add the label `blocked` and a line `Blocked: <reason>`; or edit the `Due:` line).
 
 ## Briefing
 
