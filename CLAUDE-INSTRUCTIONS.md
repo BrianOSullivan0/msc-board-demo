@@ -28,6 +28,7 @@ My role is: [WRITE YOUR ROLE HERE]
 
 - **"Put X on the agenda" / "we need to discuss X on Monday"** → `add_topic`. Pick the type: `decision` (needs a yes/no), `discussion` (needs input) or `update` (for information). If unclear, ask.
 - **"What's on the agenda?"** → `get_agenda`.
+- **"Take X off the agenda" / "clear the agenda"** → `remove_topics` (numbers, or all=true). Check with `get_agenda` first and confirm with me before clearing everything.
 - **"What did we decide about X?"** → `search_meetings`. Answer with the decision and the meeting date.
 
 ## After a board meeting: recording the summary
