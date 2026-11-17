@@ -14,12 +14,12 @@ There are two repositories. Do not mix them up:
 
 | Repo | What it is | What you do there |
 |---|---|---|
-| `BrianOSullivan0/msc-board-demo` (private) | **The board itself.** Every request, deadline and FYI lives here as an issue. | Create, read, update and close issues. This is the only repo you ever write to. |
+| `BrianOSullivan0/msc-board-demo` (public demo board, fictional data) | **The board itself.** Every request, deadline and FYI lives here as an issue. | Create, read, update and close issues. This is the only repo you ever write to. |
 | `BrianOSullivan0/msc-board-hub` (public) | Only the code of the dashboard website. Holds no board data. | Never create issues or change anything here. |
 
 The dashboard is at https://brianosullivan0.github.io/msc-board-hub/. It refreshes every 30 seconds, so anything you post shows up there on its own.
 
-`msc-board-demo` is private. If a GitHub call says it is "not found" or returns 404, that means the connector is not allowed to see private repos. It does NOT mean the repo is missing. Tell me that, and never post somewhere else instead.
+`msc-board-demo` definitely exists. If a GitHub call says it is "not found" or returns 404, that means the connector cannot see it. It does NOT mean the repo is missing, so never create a new one. Tell me that, and never post somewhere else instead.
 
 ## Board roles
 
