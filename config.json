@@ -1,0 +1,5 @@
+{
+  "demo": true,
+  "meetingDay": "Monday",
+  "roles": ["P", "VP", "ER", "BD", "HR", "PR"]
+}
