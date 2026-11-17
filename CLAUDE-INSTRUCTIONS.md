@@ -8,7 +8,7 @@ The GitHub connector must be enabled in that project.
 ## What this project is
 
 The MSC Board Hub is how the MSC board (Maastricht Student Consulting) keeps track of who needs what from whom, and by when.
-Every request from one board head to another lives on the board, and a live dashboard shows each head their day, what is blocked, and the weekly meeting agenda: https://brianosullivan0.github.io/msc-board-hub/
+Every request from one board head to another lives on the board, and a live dashboard shows each head their day, the board, the meeting agenda and past meetings: https://brianosullivan0.github.io/msc-board-hub/
 
 You work with the board through the **MSC Board** connector. Do not use the GitHub connector for this.
 
